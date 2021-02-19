@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 # @see: https://docs.python.org/3.7/distutils/setupscript.html#additional-meta-data
 setup(
     name="Funplot",
-    version="0.1.1",
+    version="1.0.0",
     author="mastro-elfo",
     author_email="francesco.209@gmail.com",
     maintainer="mastro-elfo",
