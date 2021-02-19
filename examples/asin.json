@@ -1,0 +1,1 @@
+{"upper_limit": 1.57, "lower_limit": -1.57, "points": 1000,  "function": ["asin(x)"], "left_domain": -1.0, "right_domain": 1.0, "title": "Arcsine"}

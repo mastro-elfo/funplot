@@ -1,0 +1,1 @@
+{"function": ["(x)**2/(1+(x))"], "title": "Hyperbole", "left_domain": -10.0, "right_domain": 10.0, "lower_limit": -10.0, "upper_limit": 10.0, "points": 2000, "vertical_asymptote": [-1.0], "oblique_asymptote": [[1.0, -1.0]], "point": [[-1.0, -2.0]]}

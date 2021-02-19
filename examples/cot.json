@@ -1,0 +1,1 @@
+{"vertical_asymptote": [0.0, 3.14, 6.28, -3.14, -6.28], "upper_limit": 10.0, "lower_limit": -10.0, "points": 2000, "function": ["1/tan(x)"], "left_domain": -6.28, "right_domain": 6.28, "title": "Cotangent"}

@@ -1,0 +1,1 @@
+{"function": ["1/cos(x)", "1/sin(x)"], "title": "Cosecant and Secant", "left_domain": -6.28, "right_domain": 6.28, "lower_limit": -10.0, "upper_limit": 10.0, "points": 2000}

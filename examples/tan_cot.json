@@ -1,0 +1,1 @@
+{"title": "Tangent and Cotangent", "function": ["tan(x)", "1/tan(x)"], "left_domain": -6.28, "right_domain": 6.28, "lower_limit": -10.0, "upper_limit": 10.0, "points": 2000}

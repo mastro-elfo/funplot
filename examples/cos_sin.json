@@ -1,0 +1,1 @@
+{"function": ["cos(x)", "sin(x)"], "title": "Cosine and Sine",  "upper_limit": 1.0, "lower_limit": -1.0, "points": 100, "left_domain": -6.28, "right_domain": 6.28}

@@ -1,0 +1,1 @@
+{"upper_limit": 1.57, "lower_limit": -1.57,  "function": ["atan(x)"], "title": "Arctangent", "horizontal_asymptote":[1.57, -1.57]}
