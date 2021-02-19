@@ -34,7 +34,7 @@ def plot(
     # Plot X axis
     draw_axis(plt.hlines, left_domain, right_domain, lower_limit, upper_limit)
     # Plot Y axis
-    draw_axis(plt.vlines, left_domain, right_domain, lower_limit, upper_limit)
+    draw_axis(plt.vlines, lower_limit, upper_limit, left_domain, right_domain)
     # Plot vertical asymptotes
     draw_vh_asymptotes(plt.vlines, vertical_asymptote, lower_limit, upper_limit)
     # Plot horizontal asymptotes
