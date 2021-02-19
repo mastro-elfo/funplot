@@ -32,9 +32,9 @@ def plot(
     # Plot graph
     plt = graph.plot(kind="line", grid=True, title=title)
     # Plot X axis
-    draw_axis(plt.hlines, lower_limit, upper_limit)
+    draw_axis(plt.hlines, left_domain, right_domain, lower_limit, upper_limit)
     # Plot Y axis
-    draw_axis(plt.vlines, left_domain, right_domain)
+    draw_axis(plt.vlines, left_domain, right_domain, lower_limit, upper_limit)
     # Plot vertical asymptotes
     draw_vh_asymptotes(plt.vlines, vertical_asymptote, lower_limit, upper_limit)
     # Plot horizontal asymptotes
@@ -49,10 +49,10 @@ def plot(
     return plt
 
 
-def draw_axis(axis, minimum, maximum):
+def draw_axis(axis, axis_min, axis_max, minimum, maximum):
     """Use function axis to plot the horizontal or vertical axis"""
     if minimum <= 0 and maximum >= 0:
-        axis(0, minimum, maximum, color="k")
+        axis(0, axis_min, axis_max, color="k")
 
 
 def affine_fn(x, slope, intercept):
