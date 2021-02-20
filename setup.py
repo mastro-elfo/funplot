@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 # @see: https://docs.python.org/3.7/distutils/setupscript.html#additional-meta-data
 setup(
     name="Funplot",
-    version="1.0.3",
+    version="1.0.4",
     author="mastro-elfo",
     author_email="francesco.209@gmail.com",
     maintainer="mastro-elfo",
@@ -30,5 +30,5 @@ setup(
         "pytz==2021.1",
         "six==1.15.0",
     ],
-    entry_points={"console_scripts": ["funplot=funplot.__main__:cli"]},
+    entry_points={"console_scripts": ["funplot=funplot.main:cli"]},
 )
