@@ -73,6 +73,9 @@ Y coordinate of an horizontal asymptote.
 #### `-oa` `--oblique-asymptote` ((float, float), multiple)
 A pair of values which represent the slope and intercept of an oblique asymptote.
 
+### `--pretty`
+Prints a better version of the formula in the graph legend.
+
 ```sh
 funplot draw <options> -oa 1 -1
 ```

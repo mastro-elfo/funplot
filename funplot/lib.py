@@ -19,6 +19,7 @@ def plot(
     horizontal_asymptote=[],
     oblique_asymptote=[],
     point=[],
+    pretty=False,
 ):
     """Plot function with given configuration"""
     # Initialize lower limit
@@ -26,7 +27,7 @@ def plot(
     # Create domain list
     xes = np.linspace(left_domain, right_domain, points)
     # Create image list
-    yes = get_images(function, xes, upper_limit, lower_limit)
+    yes = get_images(function, xes, upper_limit, lower_limit, pretty)
     # Create graph
     graph = pd.DataFrame(yes, xes)
     # Plot graph
@@ -160,10 +161,11 @@ def update_config(from_cli, from_file):
     )
 
 
-def get_images(functions, domain, upper_limit, lower_limit):
+def get_images(functions, domain, upper_limit, lower_limit, pretty=False):
     """Create a dict with functions images"""
+
     return {
-        func: get_image(
+        prettify(func, pretty): get_image(
             func,
             domain,
             upper_limit,
@@ -171,6 +173,12 @@ def get_images(functions, domain, upper_limit, lower_limit):
         )
         for i, func in enumerate(functions)
     }
+
+
+def prettify(formula, pretty=False):
+    if pretty:
+        return formula.replace("(x)", "x").replace("**", "^")
+    return formula
 
 
 def get_image(func, domain, upper_limit, lower_limit):
