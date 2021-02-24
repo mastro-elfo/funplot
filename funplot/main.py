@@ -64,6 +64,12 @@ def cli():
     type=(float, float),
     help="Point X and Y",
 )
+@click.option(
+    "--pretty/--no-pretty",
+    default=False,
+    type=bool,
+    help="Pretty print formula in legend",
+)
 # Config file
 @click.option("-if", "--input_file", default=None, help="Load config from file")
 @click.option("-of", "--output-file", default=None, help="Dump config to file")
