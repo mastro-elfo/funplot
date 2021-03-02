@@ -171,7 +171,7 @@ def get_images(functions, domain, upper_limit, lower_limit, pretty=False):
             upper_limit,
             lower_limit,
         )
-        for i, func in enumerate(functions)
+        for func in functions
     }
 
 
