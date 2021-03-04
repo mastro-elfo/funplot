@@ -1,1 +1,1 @@
-{"function": ["cos(x)", "1/cos(x)"], "title": "Cosine and Cosecant", "left_domain": -6.28, "right_domain": 6.28, "lower_limit": -10.0, "upper_limit": 10.0, "points": 2000}
+{"vertical_asymptote": [1.57, 4.71, -1.57, -4.71], "pretty": false, "function": ["cos(x)", "1/cos(x)"], "title": "Cosine and Cosecant", "left_domain": -6.28, "right_domain": 6.28, "lower_limit": -10.0, "upper_limit": 10.0, "points": 2000}
