@@ -67,7 +67,16 @@ def inverse_affine_fn(y, slope, intercept):
 def bound_asymptote(slope, intercept, xmin, xmax, ymin, ymax):
     """Find the correct bounding box of a line with slope and intercept"""
     y_xmin = affine_fn(xmin, slope, intercept)
-    if y_xmin > ymax or y_xmin < ymin:
+    if y_xmin > ymax:
+        return bound_asymptote(
+            slope,
+            intercept,
+            inverse_affine_fn(ymax, slope, intercept),
+            xmax,
+            ymin,
+            ymax,
+        )
+    if y_xmin < ymin:
         return bound_asymptote(
             slope,
             intercept,
@@ -77,7 +86,16 @@ def bound_asymptote(slope, intercept, xmin, xmax, ymin, ymax):
             ymax,
         )
     y_xmax = affine_fn(xmax, slope, intercept)
-    if y_xmax > ymax or y_xmax < ymin:
+    if y_xmax < ymin:
+        return bound_asymptote(
+            slope,
+            intercept,
+            xmin,
+            inverse_affine_fn(ymin, slope, intercept),
+            ymin,
+            ymax,
+        )
+    if y_xmax > ymax:
         return bound_asymptote(
             slope,
             intercept,
