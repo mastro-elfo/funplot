@@ -5,9 +5,12 @@ import pandas as pd
 
 from .lib import load_config, store_config, update_config, save_figure, plot as plot_fn
 
+__version__ = "1.2.0"
+
 
 # Command line intarface
 @click.group()
+@click.version_option(__version__)
 def cli():
     pass
 

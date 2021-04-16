@@ -1,10 +1,11 @@
 from setuptools import setup, find_packages
+from funplot.main import __version__
 
 # @see: https://stackoverflow.com/questions/58533084/what-keyword-arguments-does-setuptools-setup-accept
 # @see: https://docs.python.org/3.7/distutils/setupscript.html#additional-meta-data
 setup(
     name="Funplot",
-    version="1.1.1",
+    version=__version__,
     author="mastro-elfo",
     author_email="francesco.209@gmail.com",
     maintainer="mastro-elfo",
