@@ -1,7 +1,4 @@
 import click
-from json import dump, load
-import math
-import pandas as pd
 
 from .lib import load_config, store_config, update_config, save_figure, plot as plot_fn
 
