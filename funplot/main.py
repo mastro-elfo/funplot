@@ -1,6 +1,12 @@
 import click
 
-from .lib import load_config, store_config, update_config, save_figure, plot as plot_fn
+from .lib import (
+    load_config,
+    store_config,
+    update_config,
+    save_figure,
+    plot as plot_fn
+    )
 
 __version__ = "1.3.0"
 
@@ -15,20 +21,36 @@ def cli():
 @cli.command(help="Draw a function graph")
 # Function options
 @click.option(
-    "-f", "--function", default=None, multiple=True, help="The function to plot"
+    "-f",
+    "--function",
+    default=None,
+    multiple=True,
+    help="The function to plot"
 )
 @click.option(
     "-ld", "--left-domain", default=None, type=float, help="Domain left limit"
 )
 @click.option(
-    "-rd", "--right-domain", default=None, type=float, help="Domain right limit"
+    "-rd",
+    "--right-domain",
+    default=None,
+    type=float,
+    help="Domain right limit"
 )
 @click.option("--points", default=None, type=int, help="Number of points")
 @click.option(
-    "-ul", "--upper-limit", default=None, type=float, help="Function upper limit"
+    "-ul",
+    "--upper-limit",
+    default=None,
+    type=float,
+    help="Function upper limit"
 )
 @click.option(
-    "-ll", "--lower-limit", default=None, type=float, help="Function lower limit"
+    "-ll",
+    "--lower-limit",
+    default=None,
+    type=float,
+    help="Function lower limit"
 )
 # Graph options
 @click.option("-t", "--title", default=None, help="Graph title")
@@ -71,12 +93,18 @@ def cli():
     help="Pretty print formula in legend",
 )
 # Config file
-@click.option("-if", "--input_file", default=None, help="Load config from file")
+@click.option(
+    "-if",
+    "--input_file",
+    default=None,
+    help="Load config from file"
+)
 @click.option("-of", "--output-file", default=None, help="Dump config to file")
 @click.option("--figure", default=None, help="File name for the plot")
 def draw(figure, input_file, output_file, **config):
     # Filter None(s)
-    config = {key: val for key, val in config.items() if val is not None and val != ()}
+    config = {key: val for key,
+              val in config.items() if val is not None and val != ()}
     # Load config
     from_file = load_config(input_file)
     # Update config
