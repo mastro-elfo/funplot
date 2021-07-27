@@ -37,12 +37,27 @@ def plot(
     # Plot Y axis
     draw_axis(plt.vlines, lower_limit, upper_limit, left_domain, right_domain)
     # Plot vertical asymptotes
-    draw_vh_asymptotes(plt.vlines, vertical_asymptote, lower_limit, upper_limit)
+    draw_vh_asymptotes(
+        plt.vlines,
+        vertical_asymptote,
+        lower_limit,
+        upper_limit
+    )
     # Plot horizontal asymptotes
-    draw_vh_asymptotes(plt.hlines, horizontal_asymptote, left_domain, right_domain)
+    draw_vh_asymptotes(
+        plt.hlines,
+        horizontal_asymptote,
+        left_domain,
+        right_domain
+     )
     # Plot oblique asymptotes
     draw_oblique_asymptotes(
-        plt, oblique_asymptote, left_domain, right_domain, lower_limit, upper_limit
+        plt,
+        oblique_asymptote,
+        left_domain,
+        right_domain,
+        lower_limit,
+        upper_limit
     )
     # Draw points
     draw_points(plt, point)
@@ -113,16 +128,22 @@ def draw_oblique_asymptotes(
     if oblique_asymptote:
         for slope, intercept in oblique_asymptote:
             x1, x2, y1, y2 = bound_asymptote(
-                slope, intercept, left_domain, right_domain, lower_limit, upper_limit
+                slope,
+                intercept,
+                left_domain,
+                right_domain,
+                lower_limit,
+                upper_limit
             )
             plt.plot([x1, x2], [y1, y2], color="gray", linestyle="dotted")
 
 
 def draw_vh_asymptotes(asymptote, coord, minimum, maximum):
-    """Use function provided with `asymptote` to plot horizontal or vertical lines"""
+    """Plot horizontal and vertical asymptotes"""
     if coord:
         for c in coord:
-            asymptote(coord, minimum, maximum, color="gray", linestyles="dotted")
+            asymptote(coord, minimum, maximum,
+                      color="gray", linestyles="dotted")
 
 
 def draw_points(plt, points):
@@ -168,7 +189,9 @@ def store_config(output_file, config):
 
 
 def update_config(from_cli, from_file):
-    """Updates the first dict with items from second if they're not already defined"""
+    """Merge the two given dictionaries
+    Updates the first dict with items from second if they're not already
+    defined"""
     from_cli.update(
         {
             key: val
