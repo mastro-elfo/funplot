@@ -169,10 +169,6 @@ def load_config(input_file):
         with open(input_file, "r") as fp:
             # Load from file
             return load(fp)
-            # # Define deprecated keys
-            # deprecated = []
-            # # Load from file and remove deprecated keys
-            # return {key: val for key, val in load(fp).items() if key not in deprecated}
     else:
         return {}
 
